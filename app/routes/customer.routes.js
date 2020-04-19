@@ -1,21 +1,24 @@
 module.exports = app => {
   const customers = require("../controllers/customer.controller.js");
 
-  // Create a new Customer
+   // POST call route to create records in bulk 
+   app.post("/bulkcreate", customers.bulkCreate);
+
+  // POST call to create single record
   app.post("/customers", customers.create);
 
-  // Retrieve all Customers
+  // GET call to retrieve all the records present in table
   app.get("/customers", customers.findAll);
 
-  // Retrieve a single Customer with customerId
+  // GET call to retrieve a single record with ID
   app.get("/customers/:customerId", customers.findOne);
 
-  // Update a Customer with customerId
+  // PUT call to upadte record with "ID" and complete body
   app.put("/customers/:customerId", customers.update);
 
-  // Delete a Customer with customerId
+  // DELET call to Delete a recod with ID
   app.delete("/customers/:customerId", customers.delete);
 
-  // Create a new Customer
+  // DELETE call to delete all the records
   app.delete("/customers", customers.deleteAll);
 };
