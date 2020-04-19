@@ -1,4 +1,4 @@
-# Node.js Rest APIs with Express & MySQL example
+# Rest API to Update details in MySQL table using Node.js and Express.js
 
 For more details visite :
 > [https://krishankantray.blogspot.com/2020/04/csv-to-sql-import.html](https://krishankantray.blogspot.com/2020/04/csv-to-sql-import.html)
